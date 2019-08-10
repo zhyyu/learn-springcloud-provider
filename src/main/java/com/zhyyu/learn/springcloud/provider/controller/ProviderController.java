@@ -1,5 +1,7 @@
 package com.zhyyu.learn.springcloud.provider.controller;
 
+import com.zhyyu.learn.learn.springcloud.provider.api.dto.MyDTO1;
+import com.zhyyu.learn.learn.springcloud.provider.api.service.FeignApiService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import lombok.AllArgsConstructor;
@@ -13,7 +15,7 @@ import lombok.NoArgsConstructor;
  */
 @RestController
 @RequestMapping("provider")
-public class ProviderController {
+public class ProviderController implements FeignApiService {
 
     @RequestMapping("hello")
     public String hello() {
@@ -23,6 +25,11 @@ public class ProviderController {
     @RequestMapping("helloObj")
     public String helloObj(MyObj1 myObj1) {
         return myObj1.toString();
+    }
+
+    @Override
+    public String helloFromFeignApi(MyDTO1 myDTO1) {
+        return myDTO1.toString();
     }
 
     @Data
