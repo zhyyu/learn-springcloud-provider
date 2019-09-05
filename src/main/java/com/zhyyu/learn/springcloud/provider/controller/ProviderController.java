@@ -1,7 +1,7 @@
 package com.zhyyu.learn.springcloud.provider.controller;
 
-import com.zhyyu.learn.learn.springcloud.provider.api.dto.MyDTO1;
-import com.zhyyu.learn.learn.springcloud.provider.api.service.FeignApiService;
+import com.zhyyu.learn.springcloud.provider.api.dto.MyDTO1;
+import com.zhyyu.learn.springcloud.provider.api.service.FeignApiService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import lombok.AllArgsConstructor;
